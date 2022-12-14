@@ -21,22 +21,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 module freq_div_tb();
  
-	reg   clk;
-	reg   rst;
-	wire  clk_out;
- 
-	initial begin
-		clk = 'd0;
-		rst = 'd1;
-		#20
-		rst = 'd0;
-	end
-    
-	always #10 clk = ~clk;
+	
 
-	freq_div_decimal inst_freq_div_decimal (
-		.clk(clk), 
-		.rst(rst), 
-		.clk_out(clk_out)
+	freq_div 
+	freq_div (
+		.clk_i					(), 
+		.reset_i				(), 
+		.clk_o					()
 	);
 endmodule
